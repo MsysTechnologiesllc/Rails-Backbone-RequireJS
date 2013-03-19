@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Backboneworld</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%-# = javascript_include_tag "application" -%>
+  <%= requirejs_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+  <script type="text/template" id="child_view_template">
+    <div style="background-color: red;width: 55%">
+      <div> Hey {{= username }}, you just created a new Backbone child view.</div>
+    </div>
+  </script>
+
+  <!-- add placeholder application level container -->
+  <div id="TheApp"> </div>
+
+  <%= yield %>
+
+</body>
+</html>
